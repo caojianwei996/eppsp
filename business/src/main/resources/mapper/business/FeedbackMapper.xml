@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="learn.caojw.eppsp.business.mapper.FeedbackMapper">
+    <update id="update" parameterType="feedback">
+        update bus_feedback
+        set supervisor      = #{supervisor},
+            city            = #{city},
+            address         = #{address},
+            information     = #{information},
+            estimated_grade = #{estimatedGrade},
+            af_datetime     = #{afDatetime},
+            assign_datetime = #{assignDatetime},
+            remarks         = #{remarks}
+        where id = #{id}
+    </update>
+</mapper>
